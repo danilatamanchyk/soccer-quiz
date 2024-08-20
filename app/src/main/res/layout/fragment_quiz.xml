@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuizFragment">
+
+    <data>
+        <variable
+            name="quizFragment"
+            type="com.example.quiz.QuizFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewField"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:src="@drawable/football_field"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <ImageView
+                android:id="@+id/imageViewBall"
+                android:layout_width="106dp"
+                android:layout_height="84dp"
+                android:src="@drawable/ball"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangers"
+                android:text="Soccer quiz"
+                android:textColor="@color/white"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewBall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageViewField"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewQuest"
+                android:layout_width="364dp"
+                android:layout_height="46dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="30dp"
+                android:autoSizeMinTextSize="10dp"
+                android:textSize="20dp"
+                tools:text="Question"
+                android:text="@{quizFragment.currentQuizItem.question}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewField" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQuiz"
+                android:layout_width="364dp"
+                android:layout_height="196dp"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewQuest">
+
+                <RadioButton
+                    android:id="@+id/radioButtonFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@{quizFragment.answerList[0]}"
+                    tools:text="answer 1" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@{quizFragment.answerList[1]}"
+                    tools:text="answer 2" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@{quizFragment.answerList[2]}"
+                    tools:text="answer 3" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="24dp"
+                android:padding="15dp"
+                android:text="Pass"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupQuiz" />
+
+            <TextView
+                android:id="@+id/textViewScore"
+                android:layout_width="130dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="152dp"
+                android:fontFamily="@font/bangers"
+                android:text="@string/question_0_0"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.238"
+                app:layout_constraintStart_toEndOf="@+id/imageViewBall"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

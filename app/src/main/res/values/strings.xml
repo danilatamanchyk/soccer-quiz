@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">quiz</string>
+    <string name="soccer_quiz">SOCCER QUIZ</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">SETTINGS</string>
+    <string name="save_and_go_menu">SAVE AND GO MENU</string>
+    <string name="lets_quiz">LETS QUIZ</string>
+    <string name="custom_settings">custom settings</string>
+    <string name="question_0_0">Question: 0/0</string>
+    <string-array name="spinner_difficulty">
+        <item name="easy">Easy(3)</item>
+        <item name="normal">Normal(5)</item>
+        <item name="hard">Hard(9)</item>
+        <item name="impossible">Impossible(12)</item>
+        <item name="custom">Custom</item>
+    </string-array>
+</resources>

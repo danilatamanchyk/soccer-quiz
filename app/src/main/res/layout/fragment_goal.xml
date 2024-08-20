@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".GoalFragment">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <ImageView
+                    android:id="@+id/imageViewGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/football_goal"
+                    tools:layout_editor_absoluteX="-8dp"
+                    tools:layout_editor_absoluteY="-4dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="180dp"
+                    android:text="You are win!"
+                    android:textSize="42sp"
+                    android:rotation="-25"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/bangers"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonOneMoreTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonGoMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginBottom="24dp"
+                    android:padding="15dp"
+                    android:text="Go to menu"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonOneMoreTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonOneMoreTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginBottom="180dp"
+                    android:padding="15dp"
+                    android:text="One more time"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewGoal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewScore"
+                    android:layout_width="288dp"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="64dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/bangers"
+                    android:text="@string/question_0_0"
+                    android:textColor="@color/white"
+                    android:textSize="45dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </layout>
+

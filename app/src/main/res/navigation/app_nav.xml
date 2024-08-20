@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/welcomeScreenFragment">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.quiz.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_missFragment"
+            app:destination="@id/missFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_goalFragment"
+            app:destination="@id/goalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/missFragment"
+        android:name="com.example.quiz.MissFragment"
+        android:label="fragment_miss"
+        tools:layout="@layout/fragment_miss" >
+        <action
+            android:id="@+id/action_missFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="curQuestion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_missFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+        <argument
+            android:name="allOfQuestions"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="com.example.quiz.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" >
+        <action
+            android:id="@+id/action_goalFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="curQuestion"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_goalFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+        <argument
+            android:name="allOfQuestions"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.quiz.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+    </fragment>
+</navigation>

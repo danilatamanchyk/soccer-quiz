@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MissFragment">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/missLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/imageViewField"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:src="@drawable/football_field"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewSmile"
+                    android:layout_width="106dp"
+                    android:layout_height="84dp"
+                    android:src="@drawable/smiley"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewField"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bangers"
+                    android:text="Soccer quiz"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewSmile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewField"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewMissed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="You`ve missed"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewField" />
+
+
+
+                <Button
+                    android:id="@+id/buttonOneMoreTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="One more time"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewMissed" />
+
+                <Button
+                    android:id="@+id/buttonGoMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="28dp"
+                    android:padding="15dp"
+                    android:text="Go to menu"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonOneMoreTime" />
+
+                <TextView
+                    android:id="@+id/textViewScore"
+                    android:layout_width="130dp"
+                    android:layout_height="69dp"
+                    android:layout_marginTop="152dp"
+                    android:fontFamily="@font/bangers"
+                    android:text="@string/question_0_0"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.238"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSmile"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </layout>
